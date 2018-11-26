@@ -1,5 +1,5 @@
 {% set name = "cybuffer" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ae5e22cc032b0a761ba891c8aac37382c2a35d862236d6cbd7cd8ec671d62407
+  sha256: c043e5560ba095fe3af839fd3fca713cc3183b348f742eca8535abcd4427e34b
 
 build:
   number: 1000
