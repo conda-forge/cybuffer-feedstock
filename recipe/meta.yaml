@@ -6,16 +6,17 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c043e5560ba095fe3af839fd3fca713cc3183b348f742eca8535abcd4427e34b
 
 build:
-  number: 1004
+  number: 1005
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
   build:
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
   host:
     - cython >=0.27.3
     - python
